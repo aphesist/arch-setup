@@ -32,7 +32,8 @@ sudo pacman -Syu --needed "${DEV_CORE[@]}" "${RUST[@]}" "${PYTHON[@]}" "${NODE[@
 # spotify              Spotify's own Debian repo, signature-checked
 # spicetify-cli        GitHub release of spicetify/cli
 # spicetify-marketplace-bin  Spicetify's extension/theme marketplace
-# claude-desktop       Anthropic's official .deb (downloads.claude.ai), repackaged
+# claude-desktop-extra Anthropic's signed .deb plus community patches (whole-app themes);
+#                      built by GitHub Actions in patrickjaja/claude-desktop-extra
 # figma-agent-linux-bin  local fonts for Figma's web app
 # vesktop-bin          Discord client (Vencord), official GitHub release
 say "Importing Spotify's package signing key"
@@ -40,7 +41,7 @@ gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys E1096BCBFF6D418796DE7851
 
 say "Installing AUR packages"
 yay -S --needed --noconfirm --answerdiff None --answerclean None --removemake \
-    zen-browser-bin spotify spicetify-cli spicetify-marketplace-bin claude-desktop figma-agent-linux-bin vesktop-bin
+    zen-browser-bin spotify spicetify-cli spicetify-marketplace-bin claude-desktop-extra figma-agent-linux-bin vesktop-bin
 
 # ---------------------------------------------------------------- system setup
 say "Docker: start on demand, add you to the docker group (takes effect after re-login)"
