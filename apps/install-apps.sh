@@ -34,12 +34,13 @@ sudo pacman -Syu --needed "${DEV_CORE[@]}" "${RUST[@]}" "${PYTHON[@]}" "${NODE[@
 # spicetify-marketplace-bin  Spicetify's extension/theme marketplace
 # claude-desktop       Anthropic's official .deb (downloads.claude.ai), repackaged
 # figma-agent-linux-bin  local fonts for Figma's web app
+# vesktop-bin          Discord client (Vencord), official GitHub release
 say "Importing Spotify's package signing key"
 gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys E1096BCBFF6D418796DE78515384CE82BA52C83A
 
 say "Installing AUR packages"
 yay -S --needed --noconfirm --answerdiff None --answerclean None --removemake \
-    zen-browser-bin spotify spicetify-cli spicetify-marketplace-bin claude-desktop figma-agent-linux-bin
+    zen-browser-bin spotify spicetify-cli spicetify-marketplace-bin claude-desktop figma-agent-linux-bin vesktop-bin
 
 # ---------------------------------------------------------------- system setup
 say "Docker: start on demand, add you to the docker group (takes effect after re-login)"
@@ -56,7 +57,7 @@ systemctl --user enable --now figma-agent.socket
 # ---------------------------------------------------------------- checks
 say "Verification"
 for c in clang cmake rustup uv node pnpm bun go java zig mise docker gh lazygit zeditor chromium \
-         zen-browser spotify spicetify claude-desktop figma-agent; do
+         zen-browser spotify spicetify claude-desktop figma-agent vesktop; do
     if command -v "$c" >/dev/null; then echo "  ok   $c"; else echo "  FAIL $c"; fi
 done
 echo

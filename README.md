@@ -64,7 +64,7 @@ bash apps/user-setup.sh        # no sudo
 | Containers | `docker` + compose + buildx (socket-activated; you're added to the `docker` group) |
 | Git | `github-cli` `lazygit` `git-delta` `git-lfs` |
 | CLI | `ripgrep` `fd` `bat` `eza` `fzf` `zoxide` `jq` `yq` `btop` `tmux` `hyperfine` `tokei` `shellcheck` `shfmt` … |
-| Apps | Zed · Chromium · [Zen Browser](https://zen-browser.app) · Spotify + [Spicetify](https://spicetify.app) (+ Marketplace) · Claude desktop · Figma (as a Chromium app window, with `figma-agent` for local fonts) |
+| Apps | Zed · Chromium · [Zen Browser](https://zen-browser.app) · [Vesktop](https://vesktop.dev) (Discord) · Spotify + [Spicetify](https://spicetify.app) (+ Marketplace) · Claude desktop · Figma (as a Chromium app window, with `figma-agent` for local fonts) |
 
 AUR packages are listed in the script with what each one downloads; review
 them before installing. Spotify's signing key is imported explicitly.
