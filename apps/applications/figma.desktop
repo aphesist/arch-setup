@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Figma
+Comment=Figma web app in its own window
+Exec=chromium --app=https://www.figma.com/files --ozone-platform=wayland
+Icon=figma
+Categories=Graphics;
+StartupWMClass=chrome-www.figma.com__files-Default
