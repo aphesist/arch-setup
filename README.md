@@ -76,5 +76,5 @@ abbreviations `dc` (docker compose), `lg` (lazygit) and `ze` (zeditor).
 ## See also
 
 - [galaxy-book3-ultra-linux](https://github.com/aphesist/galaxy-book3-ultra-linux): NVIDIA power, webcam, fingerprint
-- [panacea-config](https://github.com/aphesist/panacea-config): lock screen, vault ↔ Proton Pass, motion, Spotify theme
+- [panacea-config](https://github.com/aphesist/panacea-config): lock screen, vault ↔ Proton Pass, Mullvad page, task manager, activity glow, island file picker, Spotify theme
 - [panacea-claude-bridge](https://github.com/aphesist/panacea-claude-bridge): Claude in the island chat
